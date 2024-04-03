@@ -1,0 +1,16 @@
+name: C Build
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v2
+    - name: Install GCC
+      run: sudo apt-get install gcc
+    - name: Compile C program
+      run: gcc hello_world.c -o hello_world
+    - name: Run C program
+      run: ./hello_world
