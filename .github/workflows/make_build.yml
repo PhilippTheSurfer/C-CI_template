@@ -17,9 +17,12 @@ jobs:
       
     - name: Build Project
       run: make build
+      working-directory: make_example
       
     - name: Install Project
       run: sudo make install
+      working-directory: make_example
 
     - name: Clean Up
       run: make clean
+      working-directory: make_example
