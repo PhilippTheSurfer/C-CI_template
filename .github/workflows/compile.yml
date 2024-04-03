@@ -10,7 +10,9 @@ jobs:
     - uses: actions/checkout@v2
     - name: Install GCC
       run: sudo apt-get install gcc
+
     - name: Compile C program
-      run: gcc hello_world.c -o hello_world
+      run: gcc testFile.c -o testFile
+
     - name: Run C program
-      run: ./hello_world
+      run: ./testFile
